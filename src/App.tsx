@@ -119,7 +119,6 @@ export default function App() {
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <GlobalStyles />
       <C.Container>
         <C.InfoArea>
           <C.Header>
