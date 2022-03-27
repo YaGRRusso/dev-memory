@@ -125,7 +125,13 @@ export default function () {
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <GlobalStyles />
       <C.Container>
-        xxxxxxxxxxx
+        <C.GridArea>
+          <C.Grid>
+            {gridItems.map((item, index) => (
+              <GridCard key={index} item={item} onClick={teste} />
+            ))}
+          </C.Grid>
+        </C.GridArea>
       </C.Container>
     </ThemeProvider>
   )
