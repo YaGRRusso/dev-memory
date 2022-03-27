@@ -2,6 +2,17 @@ import { useEffect, useState } from 'react'
 import { items as gameItems, items } from './data/items'
 import { GridItemType } from './types'
 
+// Tema
+import * as C from './App.style'
+import { ThemeProvider } from 'styled-components'
+import { ThemeSwitcher } from './components/Switch'
+import { darkTheme, GlobalStyles, lightTheme } from './theme/theme'
+
+// Imagens
+import LogoDark from './assets/logo-dark.png'
+import LogoLight from './assets/logo-light.png'
+import RestartImg from './assets/svgs/restart.svg'
+
 export default function () {
   const [darkMode, setDarkMode] = useState(true)
   const [playing, setPlaying] = useState(false)
