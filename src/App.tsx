@@ -18,6 +18,7 @@ import { InfoItem } from './components/InfoItem'
 import { Button } from './components/Button'
 import { GridCard } from './components/GridCard'
 import { formatTime } from './helpers/formatTime'
+import { ThemeSwitcher } from './components/ThemeSwticher'
 
 export default function () {
   const [darkMode, setDarkMode] = useState(true)
@@ -127,7 +128,7 @@ export default function () {
         <C.InfoArea>
           <C.Header>
             <img src={darkMode ? LogoDark : LogoLight} alt="DevMemory" />
-            <button onClick={() => { setDarkMode(!darkMode) }}>Tema</button>
+            <ThemeSwitcher darkTheme={darkMode} onClick={() => { setDarkMode(!darkMode) }} />
           </C.Header>
           <InfoItem label='Tempo' value={formatTime(time)} />
           <InfoItem label='Tentativas' value={`${moves}`} />
