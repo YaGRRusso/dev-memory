@@ -122,8 +122,11 @@ export default function () {
   }
 
   return (
-    <C.Container>
-      xxxxxx
-    </C.Container>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+      <GlobalStyles />
+      <C.Container>
+        xxxxxxxxxxx
+      </C.Container>
+    </ThemeProvider>
   )
 }
