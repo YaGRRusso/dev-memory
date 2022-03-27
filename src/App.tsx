@@ -1,3 +1,4 @@
+// React, Data e Types
 import { useEffect, useState } from 'react'
 import { items as gameItems, items } from './data/items'
 import { GridItemType } from './types'
@@ -12,6 +13,12 @@ import { darkTheme, GlobalStyles, lightTheme } from './theme/theme'
 import LogoDark from './assets/logo-dark.png'
 import LogoLight from './assets/logo-light.png'
 import RestartImg from './assets/svgs/restart.svg'
+
+// Components
+import { InfoItem } from './components/InfoItem'
+import { Button } from './components/Button'
+import { GridCard } from './components/GridCard'
+import { formatTime } from './helpers/formatTime'
 
 export default function () {
   const [darkMode, setDarkMode] = useState(true)
