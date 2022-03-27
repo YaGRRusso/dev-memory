@@ -21,7 +21,7 @@ import { GridCard } from './components/GridCard'
 import { formatTime } from './helpers/formatTime'
 
 export default function () {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
   const [playing, setPlaying] = useState(false)
   const [time, setTime] = useState(0)
   const [moves, setMoves] = useState(0)
@@ -128,7 +128,7 @@ export default function () {
         <C.InfoArea>
           <C.Header>
             <img src={darkMode ? LogoDark : LogoLight} alt="DevMemory" />
-            {/* <ThemeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} /> */}
+            <ThemeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} />
           </C.Header>
           <InfoItem label='Tempo' value={formatTime(time)} />
           <InfoItem label='Tentativas' value={`${moves}`} />
