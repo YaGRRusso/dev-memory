@@ -20,8 +20,15 @@ import { GridCard } from './components/GridCard'
 import { formatTime } from './helpers/formatTime'
 import { ThemeSwitcher } from './components/ThemeSwticher'
 
+// Tema no Local Storage
+const getLocalStorageTheme = localStorage.getItem('theme')
+let localStorageTheme: boolean = true
+if (getLocalStorageTheme === 'light') {
+  localStorageTheme = false
+}
+
 export default function () {
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(localStorageTheme)
   const [playing, setPlaying] = useState(false)
   const [time, setTime] = useState(0)
   const [moves, setMoves] = useState(0)
@@ -117,8 +124,13 @@ export default function () {
     }
   }
 
-  const teste = () => {
-
+  const setLocalStorageTheme = () => {
+    setDarkMode(!darkMode)
+    if (darkMode) {
+      localStorage.setItem('theme', 'light')
+    } else {
+      localStorage.setItem('theme', 'dark')
+    }
   }
 
   return (
@@ -128,7 +140,7 @@ export default function () {
         <C.InfoArea>
           <C.Header>
             <img src={darkMode ? LogoDark : LogoLight} alt="DevMemory" />
-            <ThemeSwitcher darkTheme={darkMode} onClick={() => { setDarkMode(!darkMode) }} />
+            <ThemeSwitcher darkTheme={darkMode} onClick={setLocalStorageTheme} />
           </C.Header>
           <InfoItem label='Tempo' value={formatTime(time)} />
           <InfoItem label='Tentativas' value={`${moves}`} />
