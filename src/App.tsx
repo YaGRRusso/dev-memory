@@ -136,7 +136,7 @@ export default function () {
         <C.GridArea>
           <C.Grid>
             {gridItems.map((item, index) => (
-              <GridCard key={index} item={item} onClick={teste} />
+              <GridCard key={index} item={item} onClick={() => { handleItemClick(index) }} />
             ))}
           </C.Grid>
         </C.GridArea>
