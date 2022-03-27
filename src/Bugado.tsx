@@ -5,7 +5,6 @@ import { items as gameItems, items } from './data/items'
 // Tema
 import * as C from './App.style'
 import { ThemeProvider } from 'styled-components'
-import { ThemeSwitcher } from './components/Switch'
 import { darkTheme, GlobalStyles, lightTheme } from './theme/theme'
 
 // Imagens
@@ -128,7 +127,6 @@ export default function App() {
         <C.InfoArea>
           <C.Header>
             <img src={darkMode ? LogoDark : LogoLight} alt="DevMemory" />
-            <ThemeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} />
           </C.Header>
           <InfoItem label='Tempo' value={formatTime(time)} />
           <InfoItem label='Tentativas' value={`${moves}`} />

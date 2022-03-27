@@ -6,7 +6,6 @@ import { GridItemType } from './types'
 // Tema
 import * as C from './App.style'
 import { ThemeProvider } from 'styled-components'
-import { ThemeSwitcher } from './components/Switch'
 import { darkTheme, GlobalStyles, lightTheme } from './theme/theme'
 
 // Imagens
@@ -128,8 +127,7 @@ export default function () {
         <C.InfoArea>
           <C.Header>
             <img src={darkMode ? LogoDark : LogoLight} alt="DevMemory" />
-            {/* <ThemeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} /> */}
-            <ThemeSwitcher darkMode={darkMode} />
+            <button onClick={() => { setDarkMode(!darkMode) }}>Tema</button>
           </C.Header>
           <InfoItem label='Tempo' value={formatTime(time)} />
           <InfoItem label='Tentativas' value={`${moves}`} />
