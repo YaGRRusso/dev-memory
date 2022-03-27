@@ -126,16 +126,17 @@ export default function () {
       <GlobalStyles />
       <C.Container>
         <C.InfoArea>
-          {/* <C.Header>
+          <C.Header>
             <img src={darkMode ? LogoDark : LogoLight} alt="DevMemory" />
             <ThemeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} />
           </C.Header>
-          <InfoItem label='Tempo' value={formatTime(time)} />
+          {/* <InfoItem label='Tempo' value={formatTime(time)} />
           <InfoItem label='Tentativas' value={`${moves}`} />
           <Button title='Reiniciar' icon={RestartImg} onClick={teste} /> */}
         </C.InfoArea>
         <C.GridArea>
           <C.Grid>
+            xxx
             {/* {gridItems.map((item, index) => (
               <GridCard key={index} item={item} onClick={teste} />
             ))} */}
