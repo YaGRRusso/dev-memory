@@ -128,7 +128,8 @@ export default function () {
         <C.InfoArea>
           <C.Header>
             <img src={darkMode ? LogoDark : LogoLight} alt="DevMemory" />
-            <ThemeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} />
+            {/* <ThemeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} /> */}
+            <ThemeSwitcher darkMode={darkMode} />
           </C.Header>
           <InfoItem label='Tempo' value={formatTime(time)} />
           <InfoItem label='Tentativas' value={`${moves}`} />

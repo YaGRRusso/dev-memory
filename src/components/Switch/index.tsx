@@ -1,11 +1,6 @@
 import Switch from 'react-switch'
 
-type Props = {
-    darkMode: boolean,
-    setDarkMode: (darkMode: boolean) => void
-}
-
-export const ThemeSwitcher = ({ darkMode, setDarkMode }: Props) => {
+export const ThemeSwitcher = ({ darkMode, setDarkMode }: any) => {
     return (
         <Switch
             checked={darkMode}
