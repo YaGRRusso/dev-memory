@@ -127,8 +127,9 @@ export default function () {
       <C.Container>
         <C.InfoArea>
           <C.Header>
-            {/* <img src={darkMode ? LogoDark : LogoLight} alt="DevMemory" /> */}
-            <ThemeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} />
+            xxx
+            <img src={darkMode ? LogoDark : LogoLight} alt="DevMemory" />
+            {/* <ThemeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} /> */}
           </C.Header>
           {/* <InfoItem label='Tempo' value={formatTime(time)} />
           <InfoItem label='Tentativas' value={`${moves}`} />
