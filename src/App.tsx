@@ -21,7 +21,7 @@ import { GridCard } from './components/GridCard'
 import { formatTime } from './helpers/formatTime'
 
 export default function () {
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(false)
   const [playing, setPlaying] = useState(false)
   const [time, setTime] = useState(0)
   const [moves, setMoves] = useState(0)
@@ -132,7 +132,7 @@ export default function () {
           </C.Header>
           <InfoItem label='Tempo' value={formatTime(time)} />
           <InfoItem label='Tentativas' value={`${moves}`} />
-          <Button title='Reiniciar' icon={RestartImg} onClick={teste} />
+          <Button title='Reiniciar' icon={RestartImg} onClick={handleReset} />
         </C.InfoArea>
         <C.GridArea>
           <C.Grid>
